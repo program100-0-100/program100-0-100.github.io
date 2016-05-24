@@ -44,7 +44,7 @@
 		top: 170px; 
 		right: 7px;
 		font-family: 'arial', 'sans-serif'; 
-		font-size: 14px;
+		font-size: 12px;
 		background-color: white;
 		border: 1px solid black;
 		padding: 10px 10px 0px 10px;
@@ -232,8 +232,11 @@
 			options: {
 				styleId: 2,
 				templateId: 2,
-				iconName:"homegardenbusiness"
-			}
+			},
+			styles: [
+				{markerOptions:{ iconName:"homegardenbusiness"}} // other landmarks
+  
+			]
 		});
 		
 		var  layer4 = new google.maps.FusionTablesLayer({
@@ -426,9 +429,9 @@
 						</div>
 					<div id="checkboxes">
 					<form>
-						<input type="checkbox" id="layer1" onclick="toggleLayer1();" checked="checked">Tingkat Kekumuhan <img src="img/desa.PNG" style="width:40px;height:22px"/></input><br />
-						<input type="checkbox" id="layer2" onclick="toggleLayer2();"checked="checked">Tingkat Wilayah (RT) <img src="img/wilayah.PNG"/></input><br />
-						<input type="checkbox" id="layer3" onclick="toggleLayer3();"checked="checked">Tingkat Rumah Tanga <img src="img/RT.PNG"style="width:30px;height:25px"/></input><br /><br/>
+						<input type="checkbox" id="layer1" onclick="toggleLayer1();" checked="checked">Tingkat Kekumuhan <img src="img/desa.PNG" style="width:30px;height:15px"/></input><br />
+						<input type="checkbox" id="layer2" onclick="toggleLayer2();"checked="checked">Tingkat Wilayah (RT) <img src="img/wilayah.PNG" style="height:25px"/></input><br />
+						<input type="checkbox" id="layer3" onclick="toggleLayer3();"checked="checked">Tingkat Rumah Tanga <img src="img/rumah.PNG"/></input><br /><br/>
 					</form>
 					</div>
 					<div id="keterangan">
