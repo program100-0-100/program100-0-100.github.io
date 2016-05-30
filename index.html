@@ -39,35 +39,6 @@
 		
 		#googft-legend{background-color:#fff;border:1px solid #000;font-family:Arial,sans-serif;font-size:12px;margin:5px;padding:10px 10px 8px}#googft-legend p{font-weight:bold;margin-top:0}#googft-legend div{margin-bottom:5px}.googft-legend-swatch{border:1px solid;float:left;height:12px;margin-right:8px;width:20px}.googft-legend-range{margin-left:0}.googft-dot-icon{margin-right:8px}.googft-paddle-icon{height:24px;left:-8px;margin-right:-8px;position:relative;vertical-align:middle;width:24px}.googft-legend-source{margin-bottom:0;margin-top:8px}.googft-legend-source a{color:#666;font-size:11px}
 		
-		#checkboxes { 
-		position: absolute; 
-		top: 170px; 
-		right: 7px;
-		font-family: 'arial', 'sans-serif'; 
-		font-size: 12px;
-		background-color: white;
-		border: 1px solid black;
-		padding: 10px 10px 0px 10px;
-		filter: alpha(opacity=80);
-		-moz-opacity: 0.80;
-		opacity: 0.80;
-		}
-		
-		#keterangan {
-		position: absolute; 
-		top: 295px; 
-		right: 7px;
-		font-family: 'arial', 'sans-serif'; 
-		font-size: 10px;
-		background-color: white;
-		border: 1px solid black;
-		padding: 10px 10px 0px 10px;
-		filter: alpha(opacity=80);
-		-moz-opacity: 0.80;
-		opacity: 0.80;
-		}
-		
-		
 		
 		#title {
 		position: absolute; 
@@ -82,7 +53,7 @@
 		-moz-opacity: 0.8;
 		opacity: 0.8;
 		}
-		
+				
 		.sidenav {
 			height: 500px;
 			width: 0;
@@ -97,7 +68,41 @@
 			-moz-opacity: 0.95;
 			opacity: 0.95;
 			padding-top: 30px;
+			
 		}
+		
+		.sidenavlay {
+			height: 160px;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 180px;
+			right: 10px;
+			font-family: 'arial', 'sans-serif'; 
+			font-size: 12px;
+			background-color: #A9A9A9;
+			overflow-x: hidden;
+			transition: 0.5s;
+			filter: alpha(opacity=95);
+			-moz-opacity: 0.95;
+			opacity: 0.95;
+			padding-top : 10px;
+			font-size: 14px;
+			font-family: 'georgia', 'serif';
+			text-align: justify;
+		}
+		
+		#desclayer {
+			position: absolute; 
+			top: 5px;
+			left: 5px;
+			right:5px;
+			bottom:5px;
+			background-color: white;
+			padding: 10px 10px 10px 10px;
+			
+		}
+		
 		#diskripsi {
 			position: absolute; 
 			top: 10px;
@@ -162,6 +167,30 @@
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 				}
 				
+				
+		#buttons2 {
+				position: absolute;
+				top: 135px;
+				right: 10px;
+				filter: alpha(opacity=80);
+				-moz-opacity: 0.8;
+				opacity: 0.8;
+				background-color: #0000FF;
+				border: none;
+				font-family: 'georgia', 'serif';
+				color: white;
+				padding: 10px 24px;
+				border-radius: 4px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				cursor: pointer;
+				-webkit-transition-duration: 0.4s; /* Safari */
+				transition-duration: 0.4s;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+				}		
+		
 		#peta {
 				position: absolute;
 				top: 80px;
@@ -427,17 +456,31 @@
 							</div>
 							<input id="googft-legend-close" style="display:none" type="button" value="Hide"></input>
 						</div>
-					<div id="checkboxes">
+									
+					<div id="button">
+						<input type=button class=buttons2 name=type id='buttons2' value='Layer' onclick="openLayer()"><span/> 
+					</div>
+					
+					<script>
+						function openLayer() {
+							document.getElementById("checkboxes").style.width = "300px";
+						}
+						function closeLayer() {
+							document.getElementById("checkboxes").style.width = "0";
+						}					
+					</script>
+					
+					<div id="checkboxes" class="sidenavlay">
+					<div id="desclayer">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeLayer()">X</a>
 					<form>
 						<input type="checkbox" id="layer1" onclick="toggleLayer1();" checked="checked">Tingkat Kekumuhan <img src="img/desa.PNG" style="width:30px;height:15px"/></input><br />
-						<input type="checkbox" id="layer2" onclick="toggleLayer2();"checked="checked">Tingkat Wilayah (RT) <img src="img/wilayah.PNG" style="height:25px"/></input><br />
-						<input type="checkbox" id="layer3" onclick="toggleLayer3();"checked="checked">Tingkat Rumah Tanga <img src="img/rumah.PNG"/></input><br /><br/>
+						<input type="checkbox" id="layer2" onclick="toggleLayer2();"checked="checked">Hasil Pendataan Program 100-0-100 <br> berbasis Wilayah <img src="img/wilayah.PNG" style="height:25px"/></input><br />
+						<input type="checkbox" id="layer3" onclick="toggleLayer3();"checked="checked">Hasil Pendataan Rumah Tangga <br> Program 100-0-100 <img src="img/rumah.PNG"/></input><br /><br/>
 					</form>
 					</div>
-					<div id="keterangan">
-						<p> Keterangan : <br> Skor 1= Baik; Skor 0= Buruk </p>
-					
 					</div>
+					
 					<div id="button">
 						<input type=button class=buttons name=type id='buttons' value='Profil Permukiman Kelurahan Bener' onclick="openProf()"><span/> 
 					</div>
