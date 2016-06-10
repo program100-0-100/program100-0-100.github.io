@@ -35,23 +35,25 @@
 	<style type="text/css">
 	</style>
 	<style>
-		#map_canvas { width: 1365px; height: 665px; }
+		#map_canvas { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; }
 		
 		#googft-legend{background-color:#fff;border:1px solid #000;font-family:Arial,sans-serif;font-size:12px;margin:5px;padding:10px 10px 8px}#googft-legend p{font-weight:bold;margin-top:0}#googft-legend div{margin-bottom:5px}.googft-legend-swatch{border:1px solid;float:left;height:12px;margin-right:8px;width:20px}.googft-legend-range{margin-left:0}.googft-dot-icon{margin-right:8px}.googft-paddle-icon{height:24px;left:-8px;margin-right:-8px;position:relative;vertical-align:middle;width:24px}.googft-legend-source{margin-bottom:0;margin-top:8px}.googft-legend-source a{color:#666;font-size:11px}
 		
 		
 		#title {
 		position: absolute; 
-		top: 10px;
-		left: 330px;
+		top: 5%;
+		left: 50%;
+		margin-right: -50%;
 		font-family: 'georgia', 'serif';
 		font-size: 12px;
 		font-weight: bold;
 		background-color: white;
-		padding: 10px 10px 10px 10px;
+		padding: 5px 5px 5px 5px;
 		filter: alpha(opacity=80);
 		-moz-opacity: 0.8;
 		opacity: 0.8;
+		transform: translate(-50%, -50%)
 		}
 				
 		.sidenav {
@@ -431,13 +433,13 @@
     
 					<div id="map_canvas"></div>
 					<div id="title">
-						<h4> Peta Interaktif Pemantauan Program 100-0-100 Kelurahan Bener</h4>
+						<h4> Peta Interaktif Penunjang Kegiatan Program 100-0-100 Kelurahan Bener</h4>
 					</div>
 					<div id="googft-legend">
 							<p id="googft-legend-title">Persen Kumuh</p>
 							<div>
 								<span class="googft-legend-swatch" style="background-color: #00ff00"></span>
-								<span class="googft-legend-range">0%-19% : Tidak Kumuh</span>
+								<span class="googft-legend-range">0%-18% : Tidak Kumuh</span>
 							</div>
 							<div>
 								<span class="googft-legend-swatch" style="background-color: #ffff00"></span>
@@ -445,11 +447,11 @@
 							</div>
 							<div>
 								<span class="googft-legend-swatch" style="background-color: #b45f06"></span>
-								<span class="googft-legend-range">44%-70% : Kumuh Sedang</span>
+								<span class="googft-legend-range">45%-70% : Kumuh Sedang</span>
 							</div>
 							<div>
 								<span class="googft-legend-swatch" style="background-color: #660000"></span>
-								<span class="googft-legend-range">70%-100% : Kumuh Berat</span>
+								<span class="googft-legend-range">71%-100% : Kumuh Berat</span>
 							</div>
 							<div class="googft-legend-source">
 								<a href="data?docid=1liQQE6tFwO7mHJXrga8vSvI-hAEP1E2DbPqPL4dg" target="_blank">Source</a>
@@ -538,7 +540,7 @@
 					</div>
 					</div>
 					<div id="peta">
-						<a href="peta.html"> Peta Penunjang Kegiatan Pemantauan Program 100-0-100</a> 
+						<a href="peta.html"> Peta Interaktif Penunjang Kegiatan Program 100-0-100</a> 
 					</div>
 					
 					
